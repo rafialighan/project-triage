@@ -19,7 +19,15 @@
     "patientGuid": "SOME-UNIQUE-ABCDE1",
     "firstName": "Isaac",
     "lastName": "Bolin",
-    "dob": "1997-09-23",
+    "dob": "1996-09-23",
+    "sexAtBirth": "M",
+    "priority": "low"
+  },
+  {
+    "patientGuid": "SOME-UNIQUE-ABCDE2",
+    "firstName": "Bjorn",
+    "lastName": "Liow",
+    "dob": "1996-02-20",
     "sexAtBirth": "M",
     "priority": "low"
   }
