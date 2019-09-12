@@ -7,7 +7,8 @@ var waitingApp = new Vue({
     fetchPatients() {
       fetch('dummy.php')
       .then(response => response.json())
-      .then(json => {waitingApp.patients = json});
+      .then(json => { waitingApp.patients = json})
+      //.then(function(response){waitingApp.patients = response.json()});
 
       // Means the same at this
       // fetch('https://randomuser.me/api/')
@@ -16,7 +17,7 @@ var waitingApp = new Vue({
 
     }
   },
-  created: function() {
+  created() {
     this.fetchPatients();
   }
 
