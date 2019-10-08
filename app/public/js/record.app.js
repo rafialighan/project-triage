@@ -19,14 +19,14 @@ var patientRecordsApp = new Vue({
         }
       })
       .then( response => response.json() )
-      .then( json => {patientRecordsApp.patients.push ( json[0])
+      .then( json => {patientRecordsApp.patients.push = json[0]})
       .catch( err=>{
-        console.error('RECORD POST ERROR:')
+        console.error('RECORD POST ERROR:');
         console.error(err);
       });
       this.patients.push( this.recordPatient );
       this.handleReset();
-    }),
+    },
     handleReset() {
       this.recordPatient = {
         firstName: '',
