@@ -15,12 +15,13 @@ INSERT INTO Patient (patientGuid, firstName, lastName, dob, sexAtBirth) VALUES
 ("SOME-DUMMY-DATA", "Pepper", "Potts", "1990-01-31",  "F");
 
 CREATE TABLE PatientVisit (
-  visitId INTEGER PRIMARY KEY AUTO_INCREMENT,
-  patientGuid VARCHAR(64) UNIQUE,
-  visitDescription TEXT DEFAULT '',
-  visitDateUtc DATETIME NOT NULL DEFAULT CURRENT_TIME,
-  priority ENUM('low', 'medium', 'high') NOT NULL DEFAULT 'low',
-  FOREIGN KEY (patientGuid) REFERENCES Patient(patientGuid)
+    visitId INTEGER PRIMARY KEY AUTO_INCREMENT,
+    patientGuid VARCHAR(64) UNIQUE,
+    visitDescription TEXT NOT NULL,
+    visitDateUtc DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    priority ENUM('low', 'medium', 'high') NOT NULL DEFAULT 'low'
+
 );
 
-INSERT INTO PatientVisit (visitId, patientGuid, visitDescription);
+INSERT INTO PatientVisit (visitId, patientGuid, visitDescription) VALUES
+(1, 'SOME-REALLY-LONG-1234', 'Anxiety from D&S');

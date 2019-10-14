@@ -1,5 +1,7 @@
 <?php
 
+// Step 0: Validation
+
 // Step 1: Get a datase connection from our help class
 $db = DbConnection::getConnection();
 
@@ -14,6 +16,7 @@ $stmt->execute([
   $_POST['visitDescription'],
   $_POST['priority']
 ]);
+
 
 // Step 4: Output
 header('HTTP/1.1 303 See Other');
